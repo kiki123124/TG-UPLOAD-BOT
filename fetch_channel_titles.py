@@ -4,8 +4,8 @@ import json
 import os
 import re
 
-api_id = 28004986
-api_hash = 'c8b6264a5d87e0e868268b17395b8b94'
+api_id = int(os.getenv('TG_API_ID'))
+api_hash = os.getenv('TG_API_HASH')
 channel = '@ZhiHuSaltPicks'
 BATCH_SIZE = 100
 SYNC_INTERVAL = 300  # 每5分钟自动同步一次

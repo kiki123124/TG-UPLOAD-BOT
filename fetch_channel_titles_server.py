@@ -8,8 +8,8 @@ import re
 
 app = Flask(__name__)
 
-api_id = 28004986
-api_hash = 'c8b6264a5d87e0e868268b17395b8b94'
+api_id = int(os.getenv('TG_API_ID'))
+api_hash = os.getenv('TG_API_HASH')
 channel = '@ZhiHuSaltPicks'
 BATCH_SIZE = 100
 

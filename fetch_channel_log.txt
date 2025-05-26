@@ -1,0 +1,33 @@
+开始首次全量同步...
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/export_for_user/fetch_channel_titles.py", line 77, in <module>
+    asyncio.run(main()) 
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/mac/Downloads/export_for_user/fetch_channel_titles.py", line 69, in main
+    await fetch_all_titles(client, channel)
+  File "/Users/mac/Downloads/export_for_user/fetch_channel_titles.py", line 28, in fetch_all_titles
+    async for message in client.iter_messages(channel, limit=BATCH_SIZE, max_id=last_id):
+  File "/Users/mac/Library/Python/3.9/lib/python/site-packages/telethon/requestiter.py", line 58, in __anext__
+    if await self._init(**self.kwargs):
+  File "/Users/mac/Library/Python/3.9/lib/python/site-packages/telethon/client/messages.py", line 47, in _init
+    offset_id = max(offset_id, max_id)
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/export_for_user/fetch_channel_titles_server.py", line 1, in <module>
+    from flask import Flask, jsonify
+ModuleNotFoundError: No module named 'flask'
+ * Serving Flask app 'fetch_channel_titles_server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/May/2025 23:49:48] "POST /sync HTTP/1.1" 200 -
+ * Serving Flask app 'fetch_channel_titles_server'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+On macOS, try disabling the 'AirPlay Receiver' service from System Preferences -> General -> AirDrop & Handoff.
+127.0.0.1 - - [26/May/2025 00:15:46] "POST /sync HTTP/1.1" 200 -
