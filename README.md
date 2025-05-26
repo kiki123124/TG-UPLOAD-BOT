@@ -2,18 +2,20 @@
 
 ## 项目简介
 
-本项目包含：
-- Telegram 书籍上传 Bot（支持批量上传、补发、指定起点上传等）
-- 频道消息同步脚本（支持 Flask API 触发）
+本项目适用于需要批量上传电子书到 Telegram 频道、同步频道消息到本地的场景。
 
-## 功能介绍
+包含以下功能：
+- 电子书批量上传 Bot（支持补发、指定起点上传等）
+- 频道消息同步脚本（可通过 Flask API 触发）
 
-- 批量上传本地书籍到频道
-- 检查并补发缺失书籍
-- 同步频道消息到本地 JSON
+## 功能说明
+
+- 批量上传本地电子书到指定频道
+- 检查并补发频道缺失书籍
+- 同步频道消息到本地 JSON 文件
 - 支持命令和按钮两种操作方式
 
-## 快速开始
+## 快速上手
 
 1. 安装依赖
 
@@ -21,9 +23,16 @@
    pip install -r requirements.txt
    ```
 
-2. 配置 Telegram Bot Token（在 `epub_uploader_bot_fixed_with_retry_v6.py` 里设置）
+2. 配置环境变量（建议写入 .env 文件或在 shell 中导出）：
 
-3. 启动 Flask 服务（用于同步）
+   ```bash
+   export TELEGRAM_BOT_TOKEN=你的BotToken
+   export TG_API_ID=你的api_id
+   export TG_API_HASH=你的api_hash
+   export TG_CHANNEL=目标频道用户名或ID（如 @your_channel 或 -100xxxxxx）
+   ```
+
+3. 启动 Flask 服务（用于同步频道消息）
 
    ```bash
    python3 fetch_channel_titles_server.py
