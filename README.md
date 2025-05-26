@@ -6,7 +6,7 @@
 - Telegram 书籍上传 Bot（支持批量上传、补发、指定起点上传等）
 - 频道消息同步脚本（支持 Flask API 触发）
 
-## 主要功能
+## 功能介绍
 
 - 批量上传本地书籍到频道
 - 检查并补发缺失书籍
@@ -44,10 +44,4 @@
 - `clean_channel_titles.py`                   清理脚本
 - `requirements.txt`                          依赖
 - `README.md`                                 项目说明
-- `.gitignore`                                忽略文件
-
-## 注意事项
-
-- 不要上传 `session_name.session` 等敏感文件
-- 书籍目录建议只上传部分示例
-- 日志、json 数据文件一般也不建议上传 
+- `.gitignore`                                忽略文件 
