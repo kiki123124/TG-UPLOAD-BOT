@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 日志和数据
+*.log
+*.json
+*.txt
+*.session
+.DS_Store
+
+# 书籍大目录
+new_categorized_books_副本/
+processed_books_rich_副本/
+
+# 其他
+.idea/
+.vscode/ 
