@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 api_id = int(os.getenv('TG_API_ID'))
 api_hash = os.getenv('TG_API_HASH')
-channel = '@ZhiHuSaltPicks'
+channel = os.getenv('TG_CHANNEL')
 BATCH_SIZE = 100
 
 msg_title_re = re.compile(r'^标题[:：]\s*(.+)', re.MULTILINE)

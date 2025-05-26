@@ -6,7 +6,7 @@ import re
 
 api_id = int(os.getenv('TG_API_ID'))
 api_hash = os.getenv('TG_API_HASH')
-channel = '@ZhiHuSaltPicks'
+channel = os.getenv('TG_CHANNEL')
 BATCH_SIZE = 100
 SYNC_INTERVAL = 300  # 每5分钟自动同步一次
 
